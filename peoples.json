@@ -1,0 +1,85 @@
+{
+  "professors": [
+    {
+      "name": "Филатова Елена Олеговна",
+      "status": "Доктор физ.-мат. наук, профессор",
+      "img": "filatova.jpg",
+      "phone": "400-00-00",
+      "email": "elenaofilatova@mail.ru"
+    },
+    {
+      "name": "Виноградов Александр Степанович",
+      "status": "Доктор физ.-мат. наук, профессор",
+      "img": "vinogradov.jpg",
+      "phone": "400-00-00",
+      "email": "asvinograd@gmail.com"
+    },
+    {
+      "name": "Павлычев Андрей Алексеевич",
+      "status": "Доктор физ.-мат. наук, профессор",
+      "img": "pavlychev.jpg",
+      "phone": "400-00-00",
+      "email": "andrey.pavlychev@gmail.com"
+    }
+  ],
+  "work_horses": [
+    {
+      "name": "Конашук Алексей Сергеевич",
+      "status": "Кандидат физ.-мат. наук, ассистент",
+      "img": "konashuk.jpg",
+      "phone": "400-00-00",
+      "email": "a.konashuk@spbu.ru"
+    },
+    {
+      "name": "Гайсин Айдар Уралович",
+      "status": "аспирант",
+      "img": "gaisin.jpg",
+      "phone": "400-00-00",
+      "email": "darikgais@gmail.com"
+    },
+    {
+      "name": "Сахоненков Сергей Сергеевич",
+      "status": "аспирант",
+      "img": "sakhonenkov.jpg",
+      "phone": "400-00-00",
+      "email": "s.sakhonenkov@gmail.com"
+    },
+    {
+      "name": "Касатиков Сергей Алексеевич",
+      "status": "аспирант",
+      "img": "kasatikov.jpg",
+      "phone": "400-00-00",
+      "email": "fiztl@yandex.ru"
+    }
+  ],
+  "students": [
+    {
+      "name": "Каратаев Андрей Владимирович",
+      "status": "Студент магистратуры",
+      "img": "karataev.jpg",
+      "phone": "400-00-00",
+      "email": "st054930@student.spbu.ru"
+    },
+    {
+      "name": "Фатеева Елизавета Сергеевна",
+      "status": "Студент бакалавриата",
+      "img": "fateeva.jpg",
+      "phone": "400-00-00",
+      "email": "fateeva.liza@yandex.ru"
+    },
+    {
+      "name": "Соломонов Антон Викторович",
+      "status": "Студент бакалавриата",
+      "img": "solomonov.jpg",
+      "phone": "400-00-00",
+      "email": "asolomonov78@gmail.com"
+    },
+    {
+      "name": "Бугаев Александр Викторович",
+      "status": "Студент бакалавриата",
+      "img": "bugaev.jpg",
+      "phone": "400-00-00",
+      "email": "bugaev.sasha99@mail.ru"
+    }
+  ]
+}

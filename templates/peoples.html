@@ -1,0 +1,41 @@
+{% include "header.html" %}
+
+
+<!--Main content-->
+<section id="Content">
+    <div class="container-fluid mt-5">
+
+        <h1 class="text-center">Состав кафедры</h1>
+
+            {% for rang in data_peoples.keys() %}
+
+                <h3 class="mt-5">{{ {'professors': 'Профессора', 'work_horses': 'Рабочие лошадки', 'students': 'Студенты'}[rang] }}</h3>
+                <hr class="my-4">
+
+                <div class="row">
+                {% for people in data_peoples[rang] %}
+                    <div class="col-lg-3 col-md-6 gy-2">
+                        <div class="card staff-profile px-2">
+                            <div class="profile-img-box">
+                                <img src="{{ url_for('static', filename='img/{}'.format(people['img'])) }}" alt="profile image">
+                            </div>
+                            <div class="card-body">
+                                <div class="name-in-card">
+                                    <h4 class="card-title mb-2">{{ people['name']}}</h4>
+                                    <h6 class="card-subtitle text-muted mb-5">{{ people['status'] }}</h6>
+                                </div>
+                                <p class="card-text">
+                                    <i class="fas fa-phone"></i>&nbsp&nbsp{{ people['phone'] }}<br>
+                                    <a class="mail-ref" href="mailto:elenaofilatova@mail.ru"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ people['email'] }}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            {% endfor %}
+
+    </div>
+</section>
+
+{% include "footer.html" %}

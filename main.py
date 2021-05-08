@@ -13,7 +13,6 @@ def home_page():
 @app.route('/peoples')
 def peoples():
     with open('peoples.json', 'r', encoding='utf-8') as file:
-        # TODO: добавить рабочую комнату, ссылку на RG(?)
         data_peoples = json.load(file)
     return render_template("peoples.html", title="Состав кафедры", data_peoples=data_peoples)
 

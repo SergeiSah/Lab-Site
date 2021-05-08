@@ -4,6 +4,10 @@
       "name": "Филатова Елена Олеговна",
       "status": "Доктор физ.-мат. наук, профессор",
       "img": "filatova.jpg",
+      "rg": "https://www.researchgate.net/profile/E-Filatova",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=7004339480",
+      "publons": "https://publons.com/researcher/4266137/elena-filatova/",
+      "orcid": "https://orcid.org/0000-0002-7187-5475",
       "phone": "400-00-00",
       "email": "elenaofilatova@mail.ru"
     },
@@ -11,6 +15,10 @@
       "name": "Виноградов Александр Степанович",
       "status": "Доктор физ.-мат. наук, профессор",
       "img": "vinogradov.jpg",
+      "rg": "https://www.researchgate.net/profile/Alexander-Vinogradov-3",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=7402889848",
+      "publons": null,
+      "orcid": "https://orcid.org/0000-0003-1189-660X",
       "phone": "400-00-00",
       "email": "asvinograd@gmail.com"
     },
@@ -18,6 +26,10 @@
       "name": "Павлычев Андрей Алексеевич",
       "status": "Доктор физ.-мат. наук, профессор",
       "img": "pavlychev.jpg",
+      "rg": "https://www.researchgate.net/profile/Andrey-Pavlychev",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=6603663725",
+      "publons": "https://publons.com/researcher/2587327/andrey-a-pavlychev/",
+      "orcid": "https://orcid.org/0000-0002-5854-2916",
       "phone": "400-00-00",
       "email": "andrey.pavlychev@gmail.com"
     }
@@ -27,6 +39,10 @@
       "name": "Конашук Алексей Сергеевич",
       "status": "Кандидат физ.-мат. наук, ассистент",
       "img": "konashuk.jpg",
+      "rg": "https://www.researchgate.net/profile/As-Konashuk",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=55319290400",
+      "publons": null,
+      "orcid": "https://orcid.org/0000-0002-5597-9450",
       "phone": "400-00-00",
       "email": "a.konashuk@spbu.ru"
     },
@@ -34,6 +50,10 @@
       "name": "Гайсин Айдар Уралович",
       "status": "аспирант",
       "img": "gaisin.jpg",
+      "rg": "https://www.researchgate.net/profile/Aidar-Gaisin",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=57211413693",
+      "publons": null,
+      "orcid": "https://orcid.org/0000-0001-6990-8269",
       "phone": "400-00-00",
       "email": "darikgais@gmail.com"
     },
@@ -41,6 +61,10 @@
       "name": "Сахоненков Сергей Сергеевич",
       "status": "аспирант",
       "img": "sakhonenkov.jpg",
+      "rg": "https://www.researchgate.net/profile/Sergei-Sakhonenkov",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=57194229627",
+      "publons": "https://publons.com/researcher/1850515/sergei-sakhonenkov/",
+      "orcid": "https://orcid.org/0000-0002-5755-0754",
       "phone": "400-00-00",
       "email": "s.sakhonenkov@gmail.com"
     },
@@ -48,6 +72,10 @@
       "name": "Касатиков Сергей Алексеевич",
       "status": "аспирант",
       "img": "kasatikov.jpg",
+      "rg": "https://www.researchgate.net/profile/Sergey-Kasatikov",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=57207771169",
+      "publons": null,
+      "orcid": null,
       "phone": "400-00-00",
       "email": "fiztl@yandex.ru"
     }
@@ -57,6 +85,10 @@
       "name": "Каратаев Андрей Владимирович",
       "status": "Студент магистратуры",
       "img": "karataev.jpg",
+      "rg": null,
+      "sc": null,
+      "publons": null,
+      "orcid": null,
       "phone": "400-00-00",
       "email": "st054930@student.spbu.ru"
     },
@@ -64,6 +96,10 @@
       "name": "Фатеева Елизавета Сергеевна",
       "status": "Студент бакалавриата",
       "img": "fateeva.jpg",
+      "rg": "https://www.researchgate.net/profile/Elizaveta-Fateeva-2",
+      "sc": "https://www.scopus.com/authid/detail.uri?authorId=57222562089",
+      "publons": null,
+      "orcid": null,
       "phone": "400-00-00",
       "email": "fateeva.liza@yandex.ru"
     },
@@ -71,6 +107,10 @@
       "name": "Соломонов Антон Викторович",
       "status": "Студент бакалавриата",
       "img": "solomonov.jpg",
+      "rg": null,
+      "sc": null,
+      "publons": null,
+      "orcid": null,
       "phone": "400-00-00",
       "email": "asolomonov78@gmail.com"
     },
@@ -78,6 +118,10 @@
       "name": "Бугаев Александр Викторович",
       "status": "Студент бакалавриата",
       "img": "bugaev.jpg",
+      "rg": null,
+      "sc": null,
+      "publons": null,
+      "orcid": null,
       "phone": "400-00-00",
       "email": "bugaev.sasha99@mail.ru"
     }

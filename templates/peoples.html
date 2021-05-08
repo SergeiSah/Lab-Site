@@ -15,20 +15,50 @@
                 <div class="row">
                 {% for people in data_peoples[rang] %}
                     <div class="col-lg-3 col-md-6 gy-2">
-                        <div class="card staff-profile px-2">
-                            <div class="profile-img-box">
-                                <img src="{{ url_for('static', filename='img/{}'.format(people['img'])) }}" alt="profile image">
+                        <div class="card">
+
+                            {# Photo #}
+                            <div class="card-header">
+                                <div class="profile-img-box">
+                                    <img src="{{ url_for('static', filename='img/{}'.format(people['img'])) }}" alt="profile image">
+                                </div>
                             </div>
-                            <div class="card-body">
+
+                            {# Main info #}
+                            <div class="card-body px-4">
+
+                                {# Name, degree, position #}
                                 <div class="name-in-card">
                                     <h4 class="card-title mb-2">{{ people['name']}}</h4>
-                                    <h6 class="card-subtitle text-muted mb-5">{{ people['status'] }}</h6>
+                                    <h6 class="card-subtitle text-secondary">{{ people['status'] }}</h6>
                                 </div>
+
+                                {# Phone and email #}
                                 <p class="card-text">
                                     <i class="fas fa-phone"></i>&nbsp&nbsp{{ people['phone'] }}<br>
-                                    <a class="mail-ref" href="mailto:elenaofilatova@mail.ru"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ people['email'] }}</a>
+                                    <a class="mail-ref" href="mailto:{{ people['email'] }}"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ people['email'] }}</a><br>
+                                </p>
+
+                            </div>
+
+                            {# Links to science resources #}
+                            <div class="card-footer d-flex justify-content-center align-items-center">
+                                <p class="card-text">
+                                    {% if people['rg'] %}
+                                        <a href="{{ people['rg'] }}"><span class="iconify r-gate" data-icon="simple-icons:researchgate" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if people['sc'] %}
+                                        <a href="{{ people['sc'] }}"><span class="iconify scopus" data-icon="simple-icons:scopus" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if people['publons'] %}
+                                        <a href="{{ people['publons'] }}"><span class="iconify publons" data-icon="simple-icons:publons" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if people['orcid'] %}
+                                        <a href="{{ people['orcid'] }}"><span class="iconify orcid" data-icon="cib:orcid" data-inline="false"></span></a>
+                                    {% endif %}
                                 </p>
                             </div>
+
                         </div>
                     </div>
                 {% endfor %}

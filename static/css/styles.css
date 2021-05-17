@@ -62,9 +62,14 @@ a {
     height: 8rem;
 }
 
-.research-box {
+.research-box, .history-box {
     font-size: 1.1rem;
     padding: 0 10% !important;
+}
+
+.history-box h4{
+    font-weight: bolder;
+    color: #9F2D20;
 }
 
 /*Images*/

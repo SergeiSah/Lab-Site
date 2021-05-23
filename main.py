@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return render_template("index.html", title="ЛУМРС")
+    with open('conferences.json', 'r', encoding='utf-8') as file:
+        data_conferences = json.load(file)
+    return render_template("index.html", title="ЛУМРС", conferences=data_conferences)
 
 
 @app.route('/peoples')

@@ -12,6 +12,26 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
+                            <h3>Конференции и школы</h3>
+                        </div>
+                        <div class="card-body">
+                            {% for conference in conferences %}
+                                <div class="pb-3">
+                                    <a href="{{ conference['url'] }}">
+                                        <p class="card-text lead mb-0">{{ conference['title'] }}</p>
+                                        <small class="text-muted">Регистрация до: {{ conference['deadline'] }}</small>
+                                        <br>
+                                        <small class="text-muted">Дата проведения: {{ conference['date'] }}</small>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
                             <h3>Новости</h3>
                         </div>
                         <div class="card-body">
@@ -21,29 +41,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h3>Конференции</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Здесь когда-нибудь будут конференции</p>
-                            <small class="text-muted">Дата проведения</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h3>Что-то еще</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Здесь когда-нибудь что-то будет</p>
-                            <small class="text-muted">Дата чего-нибудь</small>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

@@ -36,13 +36,13 @@
     {
       "name": "Барабан Александр Петрович",
       "status": "Доктор физ.-мат. наук, профессор",
-      "img": "",
-      "rg": "",
+      "img": "baraban.jpg",
+      "rg": null,
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=56984186700",
-      "publons": "",
+      "publons": null,
       "orcid": "https://orcid.org/0000-0001-8745-7019",
-      "phone": "",
-      "email": ""
+      "phone": null,
+      "email": null
     }
   ],
   "work_horses": [

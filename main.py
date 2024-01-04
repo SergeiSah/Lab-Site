@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
 import json
 
 
@@ -45,4 +45,5 @@ def history():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)

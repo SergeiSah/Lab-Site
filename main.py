@@ -42,8 +42,3 @@ def gallery():
 @app.route('/history')
 def history():
     return render_template("history.html", title="История лаборатории")
-
-
-if __name__ == '__main__':
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)

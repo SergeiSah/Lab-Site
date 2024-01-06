@@ -7,6 +7,7 @@ a {
     color: black;
 }
 
+/*Links to the indexers*/
 .scopus, .r-gate, .publons, .orcid {
     margin-right: 0.3rem;
     color: white;
@@ -47,6 +48,31 @@ a {
     background-color: #EBF3E8;
 }
 
+.btn-primary {
+  background-color: rgba(255,255,255,.25) !important;
+  border-color: rgba(255,255,255,.25) !important;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: rgba(255,255,255,.85) !important;
+  border-color: rgba(255,255,255, .85) !important;
+  color: #9F2D20;
+}
+
+.btn-secondary{
+  background-color: rgba(128,128,128,.70) !important;
+  border-color: rgba(128,128,128,.70) !important;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited,
+.btn-secondary:focus {
+  background-color: rgba(128,128,128,.95) !important;
+  border-color: rgba(128,128,128,.95) !important;
+  color: white;
+}
 
 /*Containers*/
 .container-fluid {

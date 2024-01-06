@@ -12,11 +12,11 @@ def home_page():
     return render_template("index.html", title="ЛУМРС", conferences=data_conferences)
 
 
-@app.route('/peoples')
+@app.route('/employees')
 def peoples():
-    with open('peoples.json', 'r', encoding='utf-8') as file:
+    with open('employees.json', 'r', encoding='utf-8') as file:
         data_peoples = json.load(file)
-    return render_template("peoples.html", title="Состав кафедры", data_peoples=data_peoples)
+    return render_template("employees.html", title="Состав лаборатории", data_peoples=data_peoples)
 
 
 @app.route('/research')
@@ -42,3 +42,8 @@ def gallery():
 @app.route('/history')
 def history():
     return render_template("history.html", title="История лаборатории")
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+

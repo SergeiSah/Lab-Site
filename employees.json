@@ -8,7 +8,7 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=7004339480",
       "publons": "https://publons.com/researcher/4266137/elena-filatova/",
       "orcid": "https://orcid.org/0000-0002-7187-5475",
-      "phone": "400-00-00",
+      "phone": null,
       "email": "elenaofilatova@mail.ru"
     },
     {
@@ -19,7 +19,7 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=7402889848",
       "publons": null,
       "orcid": "https://orcid.org/0000-0003-1189-660X",
-      "phone": "400-00-00",
+      "phone": null,
       "email": "asvinograd@gmail.com"
     },
     {
@@ -30,19 +30,8 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=6603663725",
       "publons": "https://publons.com/researcher/2587327/andrey-a-pavlychev/",
       "orcid": "https://orcid.org/0000-0002-5854-2916",
-      "phone": "400-00-00",
-      "email": "andrey.pavlychev@gmail.com"
-    },
-    {
-      "name": "Барабан Александр Петрович",
-      "status": "Доктор физ.-мат. наук, профессор",
-      "img": "baraban.jpg",
-      "rg": null,
-      "sc": "https://www.scopus.com/authid/detail.uri?authorId=56984186700",
-      "publons": null,
-      "orcid": "https://orcid.org/0000-0001-8745-7019",
       "phone": null,
-      "email": null
+      "email": "andrey.pavlychev@gmail.com"
     }
   ],
   "work_horses": [
@@ -54,7 +43,7 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=55319290400",
       "publons": null,
       "orcid": "https://orcid.org/0000-0002-5597-9450",
-      "phone": "400-00-00",
+      "phone": null,
       "email": "a.konashuk@spbu.ru"
     },
     {
@@ -65,7 +54,7 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57211413693",
       "publons": null,
       "orcid": "https://orcid.org/0000-0001-6990-8269",
-      "phone": "400-00-00",
+      "phone": null,
       "email": "darikgais@gmail.com"
     },
     {
@@ -76,8 +65,8 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57194229627",
       "publons": "https://publons.com/researcher/1850515/sergei-sakhonenkov/",
       "orcid": "https://orcid.org/0000-0002-5755-0754",
-      "phone": "400-00-00",
-      "email": "s.sakhonenkov@gmail.com"
+      "phone": null,
+      "email": "s.sakhonenkov@spbu.com"
     },
     {
       "name": "Касатиков Сергей Алексеевич",
@@ -87,11 +76,9 @@
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57207771169",
       "publons": null,
       "orcid": null,
-      "phone": "400-00-00",
+      "phone": null,
       "email": "fiztl@yandex.ru"
-    }
-  ],
-  "students": [
+    },
     {
       "name": "Каратаев Андрей Владимирович",
       "status": "Студент магистратуры",
@@ -100,19 +87,8 @@
       "sc": null,
       "publons": null,
       "orcid": null,
-      "phone": "400-00-00",
+      "phone": null,
       "email": "st054930@student.spbu.ru"
-    },
-    {
-      "name": "Фатеева Елизавета Сергеевна",
-      "status": "Студент бакалавриата",
-      "img": "fateeva.jpg",
-      "rg": "https://www.researchgate.net/profile/Elizaveta-Fateeva-2",
-      "sc": "https://www.scopus.com/authid/detail.uri?authorId=57222562089",
-      "publons": null,
-      "orcid": null,
-      "phone": "400-00-00",
-      "email": "fateeva.liza@yandex.ru"
     },
     {
       "name": "Соломонов Антон Викторович",
@@ -122,7 +98,7 @@
       "sc": null,
       "publons": null,
       "orcid": null,
-      "phone": "400-00-00",
+      "phone": null,
       "email": "asolomonov78@gmail.com"
     },
     {
@@ -133,8 +109,21 @@
       "sc": null,
       "publons": null,
       "orcid": null,
-      "phone": "400-00-00",
+      "phone": null,
       "email": "bugaev.sasha99@mail.ru"
+    }
+  ],
+  "students": [
+    {
+      "name": "Перекатов Поле ",
+      "status": "Студент бакалавриата",
+      "img": "perekati-pole.jpg",
+      "rg": null,
+      "sc": null,
+      "publons": null,
+      "orcid": null,
+      "phone": null,
+      "email": null
     }
   ]
 }

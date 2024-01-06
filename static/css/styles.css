@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open sans', sans-serif !important;
+    font-family: 'Calibri', sans-serif !important;
 }
 
 a {
@@ -39,6 +39,15 @@ a {
     background-color: #9F2D20 !important;
 }
 
+.bg-info {
+    background-color: #FFCD4B !important;
+}
+
+.card-footer,  .card-header {
+    background-color: #EBF3E8;
+}
+
+
 /*Containers*/
 .container-fluid {
     padding: 0 10%;
@@ -47,7 +56,7 @@ a {
 .lab-name-box{
     display: flex;
     justify-content: flex-end; /*Центрирование по горизонтали*/
-    align-items: center;     /*Центрирование по вертикали */
+    align-items: center;       /*Центрирование по вертикали */
 }
 
 .card{

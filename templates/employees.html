@@ -1,0 +1,76 @@
+{% include "header.html" %}
+
+
+<!--Main content-->
+<section id="Content">
+    <div class="container-fluid mt-5">
+
+        <h1 class="text-center">Состав лаборатории</h1>
+
+            <!--Persons by rang-->
+            {% for rang in data_peoples.keys() %}
+                <div class="row bg-info mt-5 mb-1 mx-0 pt-2 pb-1 px-3 rounded-1">
+                <h2>{{ {'professors': 'Профессора', 'work_horses': 'Рабочие лошадки', 'students': 'Студенты'}[rang] }}</h2>
+                </div>
+
+                <div class="row">
+                {% for person in data_peoples[rang] %}
+                    <div class="col-lg-3 col-md-6 gy-4">
+                        <div class="card">
+
+                            {# Photo #}
+                            <div class="card-header">
+                                <div class="profile-img-box">
+                                    <img src="{{ url_for('static', filename='img/{}'.format(person['img'])) }}" alt="profile image">
+                                </div>
+                            </div>
+
+                            {# Main info #}
+                            <div class="card-body px-4">
+
+                                {# Name, degree, position #}
+                                <div class="name-in-card">
+                                    <h4 class="card-title mb-2">{{ person['name']}}</h4>
+                                    <h6 class="card-subtitle text-secondary">{{ person['status'] }}</h6>
+                                </div>
+
+                                {# Phone and email #}
+                                <p class="card-text">
+                                    {% if person['phone'] %}
+                                        <i class="fas fa-phone"></i>&nbsp&nbsp{{ person['phone'] }}<br>
+                                    {% endif %}
+                                    {% if person['email'] %}
+                                        <a class="mail-ref" href="mailto:{{ person['email'] }}"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ person['email'] }}</a><br>
+                                    {% endif %}
+                                </p>
+
+                            </div>
+
+                            {# Links to science resources #}
+                            <div class="card-footer d-flex justify-content-center align-items-center">
+                                <p class="card-text">
+                                    {% if person['rg'] %}
+                                        <a href="{{ person['rg'] }}"><span class="iconify r-gate" data-icon="simple-icons:researchgate" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if person['sc'] %}
+                                        <a href="{{ person['sc'] }}"><span class="iconify scopus" data-icon="simple-icons:scopus" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if person['publons'] %}
+                                        <a href="{{ person['publons'] }}"><span class="iconify publons" data-icon="simple-icons:publons" data-inline="false"></span></a>
+                                    {% endif %}
+                                    {% if person['orcid'] %}
+                                        <a href="{{ person['orcid'] }}"><span class="iconify orcid" data-icon="cib:orcid" data-inline="false"></span></a>
+                                    {% endif %}
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            {% endfor %}
+
+    </div>
+</section>
+
+{% include "footer.html" %}

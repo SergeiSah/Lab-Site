@@ -48,7 +48,7 @@
     },
     {
       "name": "Гайсин Айдар Уралович",
-      "status": "аспирант",
+      "status": "Кандидат физ.-мат. наук, ассистент",
       "img": "gaisin.jpg",
       "rg": "https://www.researchgate.net/profile/Aidar-Gaisin",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57211413693",
@@ -59,7 +59,7 @@
     },
     {
       "name": "Сахоненков Сергей Сергеевич",
-      "status": "аспирант",
+      "status": "Кандидат физ.-мат. наук, ассистент",
       "img": "sakhonenkov.jpg",
       "rg": "https://www.researchgate.net/profile/Sergei-Sakhonenkov",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57194229627",
@@ -81,7 +81,7 @@
     },
     {
       "name": "Каратаев Андрей Владимирович",
-      "status": "Студент магистратуры",
+      "status": "аспирант",
       "img": "karataev.jpg",
       "rg": null,
       "sc": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Соломонов Антон Викторович",
-      "status": "Студент бакалавриата",
+      "status": "аспирант",
       "img": "solomonov.jpg",
       "rg": null,
       "sc": null,
@@ -103,7 +103,7 @@
     },
     {
       "name": "Бугаев Александр Викторович",
-      "status": "Студент бакалавриата",
+      "status": "аспирант",
       "img": "bugaev.jpg",
       "rg": null,
       "sc": null,

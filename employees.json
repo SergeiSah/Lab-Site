@@ -1,8 +1,9 @@
 {
-  "professors": [
+  "professor": [
     {
       "name": "Филатова Елена Олеговна",
-      "status": "Доктор физ.-мат. наук, профессор",
+      "degree": "доктор физ.-мат. наук",
+      "position": "профессор",
       "img": "filatova.jpg",
       "rg": "https://www.researchgate.net/profile/E-Filatova",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=7004339480",
@@ -13,7 +14,8 @@
     },
     {
       "name": "Виноградов Александр Степанович",
-      "status": "Доктор физ.-мат. наук, профессор",
+      "degree": "доктор физ.-мат. наук",
+      "position": "профессор",
       "img": "vinogradov.jpg",
       "rg": "https://www.researchgate.net/profile/Alexander-Vinogradov-3",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=7402889848",
@@ -24,7 +26,8 @@
     },
     {
       "name": "Павлычев Андрей Алексеевич",
-      "status": "Доктор физ.-мат. наук, профессор",
+      "degree": "доктор физ.-мат. наук",
+      "position": "профессор",
       "img": "pavlychev.jpg",
       "rg": "https://www.researchgate.net/profile/Andrey-Pavlychev",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=6603663725",
@@ -34,10 +37,11 @@
       "email": "andrey.pavlychev@gmail.com"
     }
   ],
-  "work_horses": [
+  "work_horse": [
     {
       "name": "Конашук Алексей Сергеевич",
-      "status": "Кандидат физ.-мат. наук, ассистент",
+      "degree": "кандидат физ.-мат. наук",
+      "position": "доцент",
       "img": "konashuk.jpg",
       "rg": "https://www.researchgate.net/profile/As-Konashuk",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=55319290400",
@@ -48,7 +52,8 @@
     },
     {
       "name": "Гайсин Айдар Уралович",
-      "status": "Кандидат физ.-мат. наук, ассистент",
+      "degree": "кандидат физ.-мат. наук",
+      "position": "ассистент",
       "img": "gaisin.jpg",
       "rg": "https://www.researchgate.net/profile/Aidar-Gaisin",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57211413693",
@@ -59,7 +64,8 @@
     },
     {
       "name": "Сахоненков Сергей Сергеевич",
-      "status": "Кандидат физ.-мат. наук, ассистент",
+      "degree": "кандидат физ.-мат. наук",
+      "position": "ассистент",
       "img": "sakhonenkov.jpg",
       "rg": "https://www.researchgate.net/profile/Sergei-Sakhonenkov",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57194229627",
@@ -70,7 +76,8 @@
     },
     {
       "name": "Касатиков Сергей Алексеевич",
-      "status": "аспирант",
+      "degree": null,
+      "position": "аспирант",
       "img": "kasatikov.jpg",
       "rg": "https://www.researchgate.net/profile/Sergey-Kasatikov",
       "sc": "https://www.scopus.com/authid/detail.uri?authorId=57207771169",
@@ -81,7 +88,8 @@
     },
     {
       "name": "Каратаев Андрей Владимирович",
-      "status": "аспирант",
+      "degree": null,
+      "position": "аспирант",
       "img": "karataev.jpg",
       "rg": null,
       "sc": null,
@@ -92,7 +100,8 @@
     },
     {
       "name": "Соломонов Антон Викторович",
-      "status": "аспирант",
+      "degree": null,
+      "position": "аспирант",
       "img": "solomonov.jpg",
       "rg": null,
       "sc": null,
@@ -103,7 +112,8 @@
     },
     {
       "name": "Бугаев Александр Викторович",
-      "status": "аспирант",
+      "degree": null,
+      "position": "аспирант",
       "img": "bugaev.jpg",
       "rg": null,
       "sc": null,
@@ -113,10 +123,11 @@
       "email": "bugaev.sasha99@mail.ru"
     }
   ],
-  "students": [
+  "student": [
     {
       "name": "Перекатов Поле ",
-      "status": "Студент бакалавриата",
+      "degree": null,
+      "position": "студент бакалавр",
       "img": "perekati-pole.jpg",
       "rg": null,
       "sc": null,

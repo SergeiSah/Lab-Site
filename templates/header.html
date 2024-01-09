@@ -41,6 +41,9 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3 my-3 rounded-1">
             {#<a class="navbar-brand" href="#">ЛУМРС</a>#}
 
+{#            <!-- Admin panel link -->#}
+{#            <a class="nav-link" style="color:#d1a19bff" href="{{ url_for('admin.index') }}"><i class="fas fa-door-open"></i></a>#}
+
             <!-- Button trigger popup with sign in -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">
               <i class="fas fa-door-open"></i>
@@ -55,19 +58,25 @@
                   </div>
 
                   <div class="modal-body px-5">
-                      <div class="form-outline form-white mb-4">
-                        <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                        <label class="form-label" for="typeEmailX">Email</label>
-                      </div>
+                      <!-- Login form -->
+                      <form method="POST" action='/login/' name="login_form">
 
-                      <div class="form-outline form-white mb-4">
-                        <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                        <label class="form-label" for="typePasswordX">Password</label>
-                      </div>
+                          <!-- Username -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="text" id="username" class="form-control form-control-lg" />
+                            <label class="form-label" for="username">Username</label>
+                          </div>
+
+                          <!-- Password -->
+                          <div class="form-outline form-white mb-4">
+                            <input type="password" id="password" class="form-control form-control-lg" />
+                            <label class="form-label" for="password">Password</label>
+                          </div>
+                      </form>
                   </div>
 
                   <div class="modal-footer bg-primary">
-                      <button type="button" class="btn btn-primary">Войти</button>
+                      <button type="submit" class="btn btn-primary" id="login_button">Войти</button>
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                   </div>
                 </div>

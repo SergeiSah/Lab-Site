@@ -10,7 +10,7 @@
             <!--Persons by rang-->
             {% for rang in data_peoples.keys() %}
                 <div class="row bg-info mt-5 mb-1 mx-0 pt-2 pb-1 px-3 rounded-1">
-                <h2>{{ {'professors': 'Профессора', 'work_horses': 'Рабочие лошадки', 'students': 'Студенты'}[rang] }}</h2>
+                <h2>{{ {'professor': 'Профессора', 'work_horse': 'Рабочие лошадки', 'student': 'Студенты'}[rang] }}</h2>
                 </div>
 
                 <div class="row">
@@ -30,8 +30,13 @@
 
                                 {# Name, degree, position #}
                                 <div class="name-in-card">
-                                    <h4 class="card-title mb-2">{{ person['name']}}</h4>
-                                    <h6 class="card-subtitle text-secondary">{{ person['status'] }}</h6>
+                                    <h4 class="card-title mb-2">{{ person['name'] }}</h4>
+                                    {% if person['degree'] %}
+                                        <h6 class="card-subtitle text-secondary">{{ person['degree'] }}</h6>
+                                    {% endif %}
+                                    {% if person['position'] %}
+                                        <h6 class="card-subtitle text-secondary">{{ person['position'] }}</h6>
+                                    {% endif %}
                                 </div>
 
                                 {# Phone and email #}

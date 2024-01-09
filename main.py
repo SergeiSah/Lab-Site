@@ -1,31 +1,20 @@
 import json
 
-from flask import Flask, render_template, redirect, url_for, request, jsonify
+from flask import render_template, redirect, url_for, request, jsonify
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 
-from plugins import admin, login_manager
-from config import Config
-from models import *
+from plugins import login_manager
+from models import User
+from app import create_app
 
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = Config.SQLALCHEMY_DATABASE_URI
-app.config['SECRET_KEY'] = Config.SECRET_KEY  # секретный ключ для хэширования данных сессии
-
-db.init_app(app)
-admin.init_app(app)
-login_manager.init_app(app)
+app = create_app()
 
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
-
-
-admin.add_link(LogoutMenuLink(name='Logout', category='', url="/logout"))
-admin.add_view(AdminModelView(Conference, db.session))
-admin.add_view(EmployeeView(Employee, db.session))
 
 
 @app.route('/')

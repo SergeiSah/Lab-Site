@@ -8,7 +8,7 @@
  $(document).ready(function(){
       {# Clicking #login_button after pressing Enter #}
       $('#password').keypress(function(e){
-        if(e.keyCode == 13)
+        if(e.keyCode === 13)
         $('#login_button').click();
       });
 
@@ -16,7 +16,7 @@
       $('#login_button').click(function(){
            var username = $('#username').val();
            var password = $('#password').val();
-           if(username != '' && password != '')
+           if(username !== '' && password !== '')
            {
                 $.ajax({
                      url:"/login",
@@ -24,15 +24,13 @@
                      data: {username:username, password:password},
                      success:function(data)
                      {
-                          alert(data);
-                          if(data == 'No-data')
+                          if(data === 'No-data')
                           {
                                alert("Invalid Email Or Password!");
                           }
                           else
                           {
                                $('#signIn').hide();
-                               location.reload();
                                window.location.replace('/admin')
                           }
                      }

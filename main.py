@@ -5,7 +5,7 @@ from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 
 from plugins import login_manager, db
-from models import User, Method, Employee, Conference
+from models import User, Method, Employee, Conference, Publications
 from app import create_app
 
 
@@ -36,7 +36,18 @@ def peoples():
 
 @app.route('/publications')
 def publications():
-    return render_template("publications.html", title="Публикации")
+    data_publications = {}
+    data = db.session.query(Publications).all()
+
+    publications_num = len(data)
+
+    for publication in data:
+        if publication.year not in data_publications:
+            data_publications[publication.year] = []
+        data_publications[publication.year].append(publication)
+
+    return render_template("publications.html", title="Публикации", data_publications=data_publications,
+                           publications_num=publications_num)
 
 
 @app.route('/research')

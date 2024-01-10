@@ -73,11 +73,13 @@ class Publications(db.Model):
     """Публикации лаборатории"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String, nullable=False)
+    authors = db.Column(db.String, nullable=False)
     journal = db.Column(db.String, nullable=False)
-    volume = db.Column(db.String, nullable=True)
-    issue = db.Column(db.String, nullable=True)
+    volume = db.Column(db.Integer, nullable=True)
+    issue = db.Column(db.Integer, nullable=True)
     pages = db.Column(db.String, nullable=True)
     year = db.Column(db.Integer, nullable=True)
+    doi = db.Column(db.String, nullable=True)
 
     def __repr__(self):
         return f"<publications {self.id}>"
@@ -86,30 +88,30 @@ class Publications(db.Model):
         return self.title
 
 
-class Author(db.Model):
-    """Авторы публикаций"""
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String, nullable=False)
-    surname = db.Column(db.String, nullable=False)
-    patronymic = db.Column(db.String, nullable=True)
+# class Author(db.Model):
+#     """Авторы публикаций"""
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     name = db.Column(db.String, nullable=False)
+#     surname = db.Column(db.String, nullable=False)
+#     patronymic = db.Column(db.String, nullable=True)
+#
+#     def __repr__(self):
+#         return f"<authors {self.id}>"
+#
+#     def __str__(self):
+#         return self.name
 
-    def __repr__(self):
-        return f"<authors {self.id}>"
 
-    def __str__(self):
-        return self.name
-
-
-class PublicationAuthor(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    publication_id = db.Column(db.Integer, db.ForeignKey('publications.id'))
-    author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
-
-    def __repr__(self):
-        return f"<publications {self.id}>"
-
-    def __str__(self):
-        return self.name
+# class PublicationAuthor(db.Model):
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     publication_id = db.Column(db.Integer, db.ForeignKey('publications.id'))
+#     author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
+#
+#     def __repr__(self):
+#         return f"<publications {self.id}>"
+#
+#     def __str__(self):
+#         return self.name
 
 
 class AdminModelView(ModelView):

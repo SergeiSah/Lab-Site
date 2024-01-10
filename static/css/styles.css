@@ -86,7 +86,7 @@ a {
     align-items: center;       /*Центрирование по вертикали */
 }
 
-.research-card, .employee-card {
+.research-card, .employee-card, .publication-card {
     box-shadow: 0 0 10px #A8ADB4;
 }
 
@@ -113,8 +113,9 @@ a {
 }
 
 .publication-year {
-    background-color:#80BCBD;
-    color:ghostwhite;
+    background-color:#AAD7D9;
+    color: white;
+    box-shadow: 2px 2px 5px #A8ADB4;
 }
 
 .publication-card:hover {

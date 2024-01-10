@@ -6,17 +6,22 @@
 
         {% set count = namespace(value=publications_num) %}
         {% for pub_year in data_publications %}
-            <div class="row px-5 mt-5">
-            <div class="row publication-year mx-0">
-                    <h3 class="my-1"><b>{{ pub_year }}</b></h3>
-            </div>
+            <div class="row px-5 mt-5 mb-4">
+                <div class="publication-year px-3 py-1">
+                        <h3 class="m-0 fw-bold">{{ pub_year }}</h3>
+                </div>
             </div>
 
 
                 {% for publication in data_publications[pub_year] %}
                     <div class="row px-5 mt-3">
-                    <div class="col">
-                        <img src="{{ url_for('static', filename='img/publications/filatova2024.jpg') }}" alt="filatova2024" class="img-fluid">
+                    <div class="col px-4 d-flex flex-wrap align-items-center">
+                        {% if publication.toc_image %}
+                            {% set file = publication.toc_image %}
+                        {% else %}
+                            {% set file = 'placeholder2.jpg' %}
+                        {% endif %}
+                        <img src="{{ url_for('static', filename='img/publications/{}'.format(file)) }}" alt="{{ file }}" class="img-fluid">
                     </div>
                     <div class="card publication-card px-0 rounded-0 border-0 col-lg-9">
                         <div class="card-header publication-card-header rounded-0 border-0">

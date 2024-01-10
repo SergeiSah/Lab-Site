@@ -80,6 +80,7 @@ class Publications(db.Model):
     pages = db.Column(db.String, nullable=True)
     year = db.Column(db.Integer, nullable=True)
     doi = db.Column(db.String, nullable=True)
+    toc_image = db.Column(db.String, nullable=True)
 
     def __repr__(self):
         return f"<publications {self.id}>"

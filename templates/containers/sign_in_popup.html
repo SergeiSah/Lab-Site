@@ -1,0 +1,32 @@
+<div class="modal fade" id="signIn" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center bg-primary">
+        <h1 class="modal-title fs-3" style="color:white" id="signInLabel">Вход в систему</h1>
+      </div>
+
+      <div class="modal-body px-5">
+          <!-- Login form -->
+          <form method="POST" action='/login/' name="login_form">
+
+              <!-- Username -->
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="username">Username</label>
+                <input type="text" id="username" class="form-control form-control-lg" />
+              </div>
+
+              <!-- Password -->
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" id="password" class="form-control form-control-lg" />
+              </div>
+          </form>
+      </div>
+
+      <div class="modal-footer bg-primary">
+          <button type="submit" class="btn btn-primary" id="login_button">Войти</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>

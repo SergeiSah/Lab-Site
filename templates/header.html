@@ -39,10 +39,6 @@
     <!--Navigation bar-->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3 my-3 rounded-1">
-            {#<a class="navbar-brand" href="#">ЛУМРС</a>#}
-
-{#            <!-- Admin panel link -->#}
-{#            <a class="nav-link" style="color:#d1a19bff" href="{{ url_for('admin.index') }}"><i class="fas fa-door-open"></i></a>#}
 
             <!-- Button trigger popup with sign in -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">
@@ -50,38 +46,7 @@
             </button>
 
             <!-- Popup with sign in form -->
-            <div class="modal fade" id="signIn" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header justify-content-center bg-primary">
-                    <h1 class="modal-title fs-3" style="color:white" id="signInLabel">Вход в систему</h1>
-                  </div>
-
-                  <div class="modal-body px-5">
-                      <!-- Login form -->
-                      <form method="POST" action='/login/' name="login_form">
-
-                          <!-- Username -->
-                          <div class="form-outline form-white mb-4">
-                            <input type="text" id="username" class="form-control form-control-lg" />
-                            <label class="form-label" for="username">Username</label>
-                          </div>
-
-                          <!-- Password -->
-                          <div class="form-outline form-white mb-4">
-                            <input type="password" id="password" class="form-control form-control-lg" />
-                            <label class="form-label" for="password">Password</label>
-                          </div>
-                      </form>
-                  </div>
-
-                  <div class="modal-footer bg-primary">
-                      <button type="submit" class="btn btn-primary" id="login_button">Войти</button>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% include "containers/sign_in_popup.html" %}
 
             <!--Button in case of collapse-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +57,13 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link" aria-current="page" href="{{ url_for('home_page') }}"><i class="fas fa-home"></i></a>
-                    <a class="nav-link" href="{{ url_for('peoples') }}">Состав</a>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Группа</a>
+                        <ul class="dropdown-menu rounded-1">
+                            <li><a class="dropdown-item" href="{{ url_for('peoples') }}">Состав</a></li>
+                            <li><a class="dropdown-item" href="#">Публикации</a></li>
+                        </ul>
+                    </div>
                     <a class="nav-link" href="{{ url_for('research') }}">Исследования</a>
                     <a class="nav-link" href="{{ url_for('methods') }}">Методы</a>
                     <a class="nav-link" href="{{ url_for('history') }}">История</a>

@@ -17,17 +17,17 @@
                 <div class="row">
                 {% for employee in data_employees[label] %}
                     <div class="col-lg-3 col-md-6 gy-4">
-                        <div class="card">
+                        <div class="card employee-card">
 
                             {# Photo #}
-                            <div class="card-header">
+                            <div class="card-header employee-card-header">
                                 <div class="profile-img-box">
                                     <img src="{{ url_for('static', filename='img/{}'.format(employee.img)) }}" alt="profile image">
                                 </div>
                             </div>
 
                             {# Main info #}
-                            <div class="card-body px-4">
+                            <div class="card-body px-4 employee-card-body">
 
                                 {# Name, degree, position #}
                                 <div class="name-in-card">
@@ -53,7 +53,7 @@
                             </div>
 
                             {# Links to science resources #}
-                            <div class="card-footer d-flex justify-content-center align-items-center">
+                            <div class="card-footer employee-card-footer d-flex justify-content-center align-items-center">
                                 <p class="card-text">
                                     {% if employee.rg %}
                                         <a href="{{ employee.rg }}"><span class="iconify r-gate" data-icon="simple-icons:researchgate" data-inline="false"></span></a>

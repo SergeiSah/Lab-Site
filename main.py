@@ -34,6 +34,11 @@ def peoples():
     return render_template("employees.html", title="Состав лаборатории", data_employees=data_employees)
 
 
+@app.route('/publications')
+def publications():
+    return render_template("publications.html", title="Публикации")
+
+
 @app.route('/research')
 def research():
     return render_template("research.html", title="Направления исследований")

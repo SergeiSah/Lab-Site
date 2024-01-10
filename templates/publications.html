@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+
+<section>
+    <div class="container-fluid mt-5">
+        <h2 class="text-center mt-5">Публикации</h2>
+
+        <div class="row px-5 mt-3">
+            <div class="row publication-year mt-3 mb-4 mx-0 pt-2 px-3">
+                <h2 class=""><b>2024</b></h2>
+            </div>
+            <div class="col">
+                <img src="{{ url_for('static', filename='img/publications/filatova2024.jpg') }}" alt="filatova2024" class="img-fluid">
+            </div>
+            <div class="card publication-card px-0 rounded-0 border-0 col-lg-9">
+                <div class="card-header publication-card-header rounded-0 border-0">
+                    <p class="m-0 fw-bold">Increasing the thermal stability of a Cr/Sc multilayer by nitriding</p>
+                </div>
+                <div class="card-body publication-card-body bg-light pt-2">
+                    <div class="row">
+                        <div class="col">
+                            <p class="m-0 fs-6">E. O. Filatova, S. S. Sakhonenkov, A. V. Solomonov, R. M. Smertin, V. N. Polkovnikov</p>
+                            <p class="fst-italic mt-1"><b>Applied Surface Science</b>, Volume 644, pp. 158791</p>
+                        </div>
+                        <div class="col-1 d-flex align-items-center flex-column mt-auto">
+                            <div class="numberCircle">1</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://doi.org/10.1016/j.apsusc.2023.158791" class="stretched-link"></a>
+            </div>
+        </div>
+        <div class="row px-5 mt-3">
+            <div class="col">
+                <img src="{{ url_for('static', filename='img/publications/gaisin2024.png') }}" alt="gaisin2024" class="img-fluid">
+            </div>
+            <div class="card publication-card px-0 rounded-0 border-0 col-lg-9">
+                <div class="card-header publication-card-header rounded-0 border-0">
+                    <p class="m-0 fw-bold">Effect of low-temperature oxidation and heat treatment under vacuum on the Al–Be interdiffusion process</p>
+                </div>
+                <div class="card-body bg-light pt-2">
+                    <p class="m-0">A. U. Gaisin, E. O. Filatova</p>
+                    <p class="m-0 fst-italic mt-1">Physical Chemistry Chemical Physics, Volume 26, Issue 2, pp. 780</p>
+                </div>
+                <a href="https://doi.org/10.1039/D3CP04309F" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}

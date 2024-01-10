@@ -1,5 +1,6 @@
 body {
     font-family: 'Calibri', sans-serif !important;
+    color: #525252;
 }
 
 a {
@@ -44,7 +45,7 @@ a {
     background-color: #FFCD4B !important;
 }
 
-.card-footer,  .card-header {
+.employee-card-footer, .employee-card-header {
     background-color: #EBF3E8;
 }
 
@@ -85,11 +86,11 @@ a {
     align-items: center;       /*Центрирование по вертикали */
 }
 
-.card{
+.research-card, .employee-card {
     box-shadow: 0 0 10px #A8ADB4;
 }
 
-.card-footer {
+.employee-card-footer {
     height: 3.5rem;
 }
 
@@ -109,6 +110,36 @@ a {
 
 .research-box .card {
     font-size: 1.2rem !important;
+}
+
+.publication-year {
+    background-color:#80BCBD;
+    color:ghostwhite;
+}
+
+.publication-card:hover {
+    transform: scale(1.01);
+}
+
+.publication-card-header {
+    background-color: #C4DFDF;
+    color: dimgray;
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+}
+
+.publication-card-body {
+    color: dimgray;
+}
+
+.numberCircle {
+    width: 31px;
+    line-height: 31px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: dimgray;
+    text-align: center;
+    background-color: #C4DFDF;
 }
 
 /*Images*/

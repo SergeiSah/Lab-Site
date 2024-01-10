@@ -19,7 +19,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -157,3 +156,4 @@ Thumbs.db
 
 
 # End of https://www.toptal.com/developers/gitignore/api/flask
+/build/

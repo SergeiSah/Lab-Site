@@ -3,3 +3,4 @@ flask-admin
 flask-login
 flask-sqlalchemy
 werkzeug
+gunicorn

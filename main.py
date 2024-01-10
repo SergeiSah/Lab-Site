@@ -4,8 +4,8 @@ from flask import render_template, redirect, url_for, request, jsonify
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 
-from plugins import login_manager
-from models import User
+from plugins import login_manager, db
+from models import User, Method, Employee, Conference
 from app import create_app
 
 
@@ -19,16 +19,19 @@ def load_user(user_id):
 
 @app.route('/')
 def home_page():
-    with open('conferences.json', 'r', encoding='utf-8') as file:
-        data_conferences = json.load(file)
-    return render_template("index.html", title="ЛУМРС", conferences=data_conferences)
+    data_conferences = db.session.query(Conference).all()
+    return render_template("index.html", title="ЛУМРС", data_conferences=data_conferences)
 
 
 @app.route('/employees')
 def peoples():
-    with open('employees.json', 'r', encoding='utf-8') as file:
-        data_peoples = json.load(file)
-    return render_template("employees.html", title="Состав лаборатории", data_peoples=data_peoples)
+    data_employees = {'professor': [], 'work_horse': [], 'student': []}
+    data = db.session.query(Employee).all()
+
+    for employee in data:
+        data_employees[employee.label].append(employee)
+
+    return render_template("employees.html", title="Состав лаборатории", data_employees=data_employees)
 
 
 @app.route('/research')
@@ -38,7 +41,8 @@ def research():
 
 @app.route('/methods')
 def methods():
-    return render_template("methods.html", title="Методы исследований")
+    data = db.session.query(Method).all()
+    return render_template("methods.html", title="Методы исследований", data_methods=data)
 
 
 @app.route('/contacts')

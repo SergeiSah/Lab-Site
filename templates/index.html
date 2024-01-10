@@ -9,19 +9,22 @@
         <div class="container-fluid">
             <div class="row">
 
+                <!-- Conferences and schools -->
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h3>Конференции и школы</h3>
                         </div>
                         <div class="card-body">
-                            {% for conference in conferences %}
+                            {% for conference in data_conferences %}
                                 <div class="pb-3">
-                                    <a href="{{ conference['url'] }}">
-                                        <p class="card-text lead mb-0">{{ conference['title'] }}</p>
-                                        <small class="text-muted">Регистрация до: {{ conference['deadline'] }}</small>
-                                        <br>
-                                        <small class="text-muted">Дата проведения: {{ conference['date'] }}</small>
+                                    <a href="{{ conference.url }}">
+                                        <p class="card-text lead mb-0">{{ conference.title }}</p>
+                                        {% if conference.deadline %}
+                                            <small class="text-muted">Регистрация до: {{ conference.deadline.date() }}</small>
+                                            <br>
+                                        {% endif %}
+                                        <small class="text-muted">Дата проведения: {{ conference.dates }}</small>
                                     </a>
                                 </div>
                             {% endfor %}

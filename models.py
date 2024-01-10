@@ -6,6 +6,7 @@ from plugins import db
 
 
 class User(db.Model, UserMixin):
+    """Зарегистрированные пользователи"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(100), nullable=False)
@@ -18,6 +19,7 @@ class User(db.Model, UserMixin):
 
 
 class Conference(db.Model):
+    """Предстоящие конференции"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String, nullable=False)
     url = db.Column(db.String, nullable=False)
@@ -32,6 +34,7 @@ class Conference(db.Model):
 
 
 class Employee (db.Model):
+    """Сотрудники лаборатории"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     label = db.Column(db.String, nullable=False)
     name = db.Column(db.String, nullable=False)
@@ -50,6 +53,20 @@ class Employee (db.Model):
 
     def __str__(self):
         return self.name
+
+
+class Method(db.Model):
+    """Описание методов исследований"""
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String, nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    img = db.Column(db.String, nullable=True)
+
+    def __repr__(self):
+        return f"<methods {self.id}>"
+
+    def __str__(self):
+        return self.title
 
 
 class AdminModelView(ModelView):

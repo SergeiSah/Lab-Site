@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
 from plugins import admin, db, login_manager
-from models import LogoutMenuLink, AdminModelView, EmployeeView, Conference, Employee
+from models import *
 
 
 def create_app():
@@ -16,5 +16,6 @@ def create_app():
     admin.add_link(LogoutMenuLink(name='Logout', category='', url="/logout"))
     admin.add_view(AdminModelView(Conference, db.session))
     admin.add_view(EmployeeView(Employee, db.session))
+    admin.add_view(AdminModelView(Method, db.session))
 
     return app

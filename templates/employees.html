@@ -6,22 +6,23 @@
     <div class="container-fluid mt-5">
 
         <h1 class="text-center">Состав лаборатории</h1>
+            {% set label_desc = {'professor': 'Профессора', 'work_horse': 'Рабочие лошадки', 'student': 'Студенты'} %}
 
             <!--Persons by rang-->
-            {% for rang in data_peoples.keys() %}
+            {% for label in data_employees %}
                 <div class="row bg-info mt-5 mb-1 mx-0 pt-2 pb-1 px-3 rounded-1">
-                <h2>{{ {'professor': 'Профессора', 'work_horse': 'Рабочие лошадки', 'student': 'Студенты'}[rang] }}</h2>
+                <h2>{{ label_desc[label] }}</h2>
                 </div>
 
                 <div class="row">
-                {% for person in data_peoples[rang] %}
+                {% for employee in data_employees[label] %}
                     <div class="col-lg-3 col-md-6 gy-4">
                         <div class="card">
 
                             {# Photo #}
                             <div class="card-header">
                                 <div class="profile-img-box">
-                                    <img src="{{ url_for('static', filename='img/{}'.format(person['img'])) }}" alt="profile image">
+                                    <img src="{{ url_for('static', filename='img/{}'.format(employee.img)) }}" alt="profile image">
                                 </div>
                             </div>
 
@@ -30,22 +31,22 @@
 
                                 {# Name, degree, position #}
                                 <div class="name-in-card">
-                                    <h4 class="card-title mb-2">{{ person['name'] }}</h4>
-                                    {% if person['degree'] %}
-                                        <h6 class="card-subtitle text-secondary">{{ person['degree'] }}</h6>
+                                    <h4 class="card-title mb-2">{{ employee.name }}</h4>
+                                    {% if employee.degree %}
+                                        <h6 class="card-subtitle text-secondary">{{ employee.degree }}</h6>
                                     {% endif %}
-                                    {% if person['position'] %}
-                                        <h6 class="card-subtitle text-secondary">{{ person['position'] }}</h6>
+                                    {% if employee.position %}
+                                        <h6 class="card-subtitle text-secondary">{{ employee.position }}</h6>
                                     {% endif %}
                                 </div>
 
                                 {# Phone and email #}
                                 <p class="card-text">
-                                    {% if person['phone'] %}
-                                        <i class="fas fa-phone"></i>&nbsp&nbsp{{ person['phone'] }}<br>
+                                    {% if employee.phone %}
+                                        <i class="fas fa-phone"></i>&nbsp&nbsp{{ employee.phone }}<br>
                                     {% endif %}
-                                    {% if person['email'] %}
-                                        <a class="mail-ref" href="mailto:{{ person['email'] }}"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ person['email'] }}</a><br>
+                                    {% if employee.email %}
+                                        <a class="mail-ref" href="mailto:{{ employee.email }}"><i class="fas fa-envelope-square"></i>&nbsp&nbsp{{ employee.email }}</a><br>
                                     {% endif %}
                                 </p>
 
@@ -54,17 +55,17 @@
                             {# Links to science resources #}
                             <div class="card-footer d-flex justify-content-center align-items-center">
                                 <p class="card-text">
-                                    {% if person['rg'] %}
-                                        <a href="{{ person['rg'] }}"><span class="iconify r-gate" data-icon="simple-icons:researchgate" data-inline="false"></span></a>
+                                    {% if employee.rg %}
+                                        <a href="{{ employee.rg }}"><span class="iconify r-gate" data-icon="simple-icons:researchgate" data-inline="false"></span></a>
                                     {% endif %}
-                                    {% if person['sc'] %}
-                                        <a href="{{ person['sc'] }}"><span class="iconify scopus" data-icon="simple-icons:scopus" data-inline="false"></span></a>
+                                    {% if employee.sc %}
+                                        <a href="{{ employee.sc }}"><span class="iconify scopus" data-icon="simple-icons:scopus" data-inline="false"></span></a>
                                     {% endif %}
-                                    {% if person['publons'] %}
-                                        <a href="{{ person['publons'] }}"><span class="iconify publons" data-icon="simple-icons:publons" data-inline="false"></span></a>
+                                    {% if employee.publons %}
+                                        <a href="{{ employee.publons }}"><span class="iconify publons" data-icon="simple-icons:publons" data-inline="false"></span></a>
                                     {% endif %}
-                                    {% if person['orcid'] %}
-                                        <a href="{{ person['orcid'] }}"><span class="iconify orcid" data-icon="cib:orcid" data-inline="false"></span></a>
+                                    {% if employee.orcid %}
+                                        <a href="{{ employee.orcid  }}"><span class="iconify orcid" data-icon="cib:orcid" data-inline="false"></span></a>
                                     {% endif %}
                                 </p>
                             </div>

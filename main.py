@@ -1,5 +1,3 @@
-import json
-
 from flask import render_template, redirect, url_for, request, jsonify
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
@@ -66,9 +64,9 @@ def contacts():
     return render_template("contacts.html", title="Контакты")
 
 
-@app.route('/gallery')
+@app.route('/research-materials')
 def gallery():
-    return render_template("gallery.html", title="Галерея")
+    return render_template("research_materials.html", title="Материалы")
 
 
 @app.route('/history')

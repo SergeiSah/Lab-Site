@@ -16,13 +16,13 @@
 
                 <div class="row">
                 {% for employee in data_employees[label] %}
-                    <div class="col-lg-3 col-md-6 gy-4">
+                    <div class="col-lg-3 col-md-6 col-sm-1 gy-4">
                         <div class="card employee-card">
 
                             {# Photo #}
                             <div class="card-header employee-card-header">
                                 <div class="profile-img-box">
-                                    <img src="{{ url_for('static', filename='img/{}'.format(employee.img)) }}" alt="profile image">
+                                    <img src="{{ url_for('static', filename='img/{}'.format(employee.img)) }}" alt="profile image" class="img-fluid card-img-top">
                                 </div>
                             </div>
 

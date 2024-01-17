@@ -5,31 +5,33 @@
     <h2 class="text-center mt-5">Основные методы исследований</h2>
     <hr class="my-4">
 
-    {% for method in data_methods %}
-    <!-- Method block -->
     <div class="row">
-        <div class="col-12 gy-2">
-            <div class="card p-4">
-                <div class="row">
+        {% for method in data_methods %}
 
-                    <!-- Image -->
-                    <div class="col-4">
-                        <div class="method-img-box rounded">
-                            <img src="{{ url_for('static', filename='img/methods/{}'.format(method.img)) }}" alt="xps">
+            <!-- Method block -->
+            <div class="col-12 gy-2">
+                <div class="card method-card p-4">
+                    <div class="row">
+
+                        <!-- Image -->
+                        <div class="col-4">
+                            <div class="method-img-box rounded">
+                                <img src="{{ url_for('static', filename='img/methods/{}'.format(method.img)) }}" alt="xps">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Description -->
-                    <div class="col-8">
-                        <h3 class="mb-3 px-4 py-2 rounded bg-primary text-white">{{ method.title }}</h3>
-                          {% for text_block in method.description.split('<br>') %}
-                            <p class="px-4 py-2 rounded bg-light">{{ text_block }}</p>
-                          {% endfor %}
-                    </div>
+                        <!-- Description -->
+                        <div class="col-8">
+                            <h3 class="mb-3 px-4 py-2 rounded bg-primary text-white">{{ method.title }}</h3>
+                              {% for text_block in method.description.split('<br>') %}
+                                <p class="px-4 py-2 rounded bg-light">{{ text_block }}</p>
+                              {% endfor %}
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
+
         {% endfor %}
     </div>
 

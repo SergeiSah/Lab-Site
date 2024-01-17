@@ -15,7 +15,9 @@
 
                 {% for publication in data_publications[pub_year] %}
                     <div class="row px-5 mt-3">
-                    <div class="col px-4 d-flex flex-wrap align-items-center">
+
+                    <!-- TOC image -->
+                    <div class="toc-image-box col px-4 d-flex flex-wrap align-items-center d-none d-lg-block">
                         {% if publication.toc_image %}
                             {% set file = publication.toc_image %}
                         {% else %}
@@ -23,6 +25,8 @@
                         {% endif %}
                         <img src="{{ url_for('static', filename='img/publications/{}'.format(file)) }}" alt="{{ file }}" class="img-fluid">
                     </div>
+
+                    <!-- Publication card -->
                     <div class="card publication-card px-0 rounded-0 border-0 col-lg-9">
                         <div class="card-header publication-card-header rounded-0 border-0">
                             <p class="m-0 fw-bold">{{ publication.title }}</p>
@@ -49,6 +53,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- DOI -->
                         <a href="{{ publication.doi }}" class="stretched-link"></a>
                     </div>
 

@@ -86,7 +86,7 @@ a {
     align-items: center;       /*Центрирование по вертикали */
 }
 
-.research-card, .employee-card, .publication-card {
+.research-card, .employee-card, .publication-card, .method-card {
     box-shadow: 0 0 10px #A8ADB4;
 }
 
@@ -113,7 +113,8 @@ a {
 }
 
 .publication-year {
-    background-color:#AAD7D9;
+    background: rgb(128,181,184);
+    background: linear-gradient(90deg, rgba(128,181,184,1) 0%, rgba(170,215,217,1) 35%, rgba(241,253,254,1) 100%);
     color: white;
     box-shadow: 2px 2px 5px #A8ADB4;
 }
@@ -199,7 +200,7 @@ a {
 /*Small screen size*/
 @media (max-width: 1000px) {
     body {
-        font-size: 0.8rem;
+        /*font-size: 0.8rem;*/
     }
 
     #spbu-logo {
@@ -223,4 +224,6 @@ a {
     .container-fluid {
         padding: 0 2%;
     }
+
+
 }

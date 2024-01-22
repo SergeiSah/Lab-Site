@@ -6,25 +6,38 @@
       </div>
 
       <div class="modal-body px-5">
+                <!-- Wrong email or password message -->
+          <div class="row bg-danger bg-gradient text-white rounded-2 mb-3 px-4 py-3" id="wrongEmail" style="display:none">
+              Неверный email или пароль!
+          </div>
+
+          <!-- Both fields are required message -->
+          <div class="row bg-danger bg-gradient text-white rounded-2 mb-3 px-4 py-3" id="bothFieldsRequired" style="display:none">
+              Оба поля должны быть заполнены!
+          </div>
+
           <!-- Login form -->
           <form method="POST" action='/login/' name="login_form">
+              {{ login_form.hidden_tag() }}  {# protection from csrf atacs #}
 
               <!-- Username -->
               <div class="form-outline form-white mb-4">
-                <label class="form-label" for="username">Username</label>
-                <input type="text" id="username" class="form-control form-control-lg" />
+                  {{ login_form.username.label() }}
+                  {{ login_form.username(id="username", class="form-control form-control-lg") }}
               </div>
 
               <!-- Password -->
               <div class="form-outline form-white mb-4">
-                <label class="form-label" for="password">Password</label>
-                <input type="password" id="password" class="form-control form-control-lg" />
+                  {{ login_form.password.label(class="form-label") }}
+                  {{ login_form.password(class="form-control form-control-lg", id="password") }}
               </div>
+
           </form>
+
       </div>
 
       <div class="modal-footer bg-primary">
-          <button type="submit" class="btn btn-primary" id="login_button">Войти</button>
+          {{ login_form.submit(class="btn btn-primary", id="login_button") }}
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>

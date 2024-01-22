@@ -4,18 +4,36 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
- <script>
- $(document).ready(function(){
+<script>
+    $(document).ready(function(){
       {# Clicking #login_button after pressing Enter #}
       $('#password').keypress(function(e){
         if(e.keyCode === 13)
         $('#login_button').click();
       });
 
+      $("#signIn").on('hide.bs.modal', function (e) {
+          $("#wrongEmail:visible").hide();
+          $("#bothFieldsRequired").hide();
+          $("#username").val('');
+          $("#password:visible").val('');
+      });
+
       {# Link bootstrap modal and /login route #}
       $('#login_button').click(function(){
            var username = $('#username').val();
            var password = $('#password').val();
+           var wrongEmail = $('#wrongEmail');
+           var bothFieldsRequired = $('#bothFieldsRequired');
+
+           if (wrongEmail.is(':visible')){
+               wrongEmail.hide();
+           }
+
+           if (bothFieldsRequired.is(':visible')){
+               bothFieldsRequired.hide();
+           }
+
            if(username !== '' && password !== '')
            {
                 $.ajax({
@@ -26,7 +44,7 @@
                      {
                           if(data === 'No-data')
                           {
-                               alert("Invalid Email Or Password!");
+                              wrongEmail.show();
                           }
                           else
                           {
@@ -38,10 +56,10 @@
            }
            else
            {
-                alert("Both Fields are required");
+                bothFieldsRequired.show();
            }
       });
- });
+    });
 </script>
 
 </body>

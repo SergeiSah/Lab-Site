@@ -5,6 +5,7 @@ from werkzeug.security import check_password_hash
 from plugins import login_manager, db
 from models import User, Method, Employee, Conference, Publications
 from app import create_app
+from forms import LoginForm
 
 
 app = create_app()
@@ -13,6 +14,12 @@ app = create_app()
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
+
+
+@app.context_processor
+def global_variables():
+    login_form = LoginForm()
+    return dict(login_form=login_form)
 
 
 @app.route('/')
@@ -72,6 +79,11 @@ def gallery():
 @app.route('/history')
 def history():
     return render_template("history.html", title="История лаборатории")
+
+
+@app.route('/beta-delta')
+def beta_delta():
+    return render_template("beta_delta.html", title="Оптические константы")
 
 
 @app.route('/login', methods=["POST", "GET"])

@@ -1,5 +1,5 @@
 from plugins import login_manager
-from models import User
+from site_models import User
 from app import create_app
 from forms import LoginForm
 

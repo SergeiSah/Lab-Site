@@ -1,0 +1,42 @@
+{% include "header.html" %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+
+<section id="Materials">
+
+    <div class="materials-box">
+        <div class="row mt-5">
+            <div class="col-3 select-materials-and-energy">
+                {{ opt_const_form.materials.label() }}
+                {{ opt_const_form.materials(id="materials") }}
+
+                {{ opt_const_form.energy.label(class="mt-2") }}
+                {{ opt_const_form.energy(class="energy") }}
+
+                {{ opt_const_form.submit(class="mt-4 btn btn-warning") }}
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<script>
+    new MultiSelectTag('materials', {
+    rounded: true,    // default true
+    shadow: true,      // default false
+    placeholder: 'Search',  // default Search...
+    tagColor: {
+        textColor: '#327b2c',
+        borderColor: '#92e681',
+        bgColor: '#eaffe6',
+    },
+    onChange: function(values) {
+        console.log(values)
+    }
+    })
+</script>
+
+
+{% include "footer.html" %}

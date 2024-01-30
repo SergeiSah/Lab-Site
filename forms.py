@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField, PasswordField, SelectMultipleField, FloatField
+from wtforms.validators import DataRequired, NumberRange
 
 
 class LoginForm(FlaskForm):
@@ -9,5 +9,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Войти')
 
 
-class CalcOptConstForm(FlaskForm):
-    pass
+class OptConstForm(FlaskForm):
+    materials = SelectMultipleField('Материалы')
+    energy = FloatField('Энергия (эВ)', validators=[NumberRange(min=50, max=30000), DataRequired()], default=112)
+    submit = SubmitField('Рассчитать')

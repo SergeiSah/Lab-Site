@@ -2,8 +2,11 @@ from flask import render_template, redirect, url_for, request, jsonify, Blueprin
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 
+import config
 from plugins import db
-from models import User, Method, Employee, Conference, Publications
+from site_models import User, Method, Employee, Conference, Publications
+from xray_models import Element, Compound
+from forms import OptConstForm
 
 
 main_bp = Blueprint('main', __name__, url_prefix='')
@@ -68,9 +71,19 @@ def history():
     return render_template("history.html", title="История лаборатории")
 
 
-@main_bp.route('/beta-delta')
+@main_bp.route('/beta-delta', methods=["POST", "GET"])
 def beta_delta():
-    return render_template("beta_delta.html", title="Оптические константы")
+    if request.method == 'POST':
+        return
+
+    # download all available elements and compounds from the databases
+    choices_el = [(e.Element, e.Element) for e in Element.query.all()]
+    choices_comp = [(c.formula, c.formula) for c in Compound.query.all()]
+
+    opt_const_form = OptConstForm()
+    opt_const_form.materials.choices = choices_el + choices_comp
+
+    return render_template("beta_delta.html", title="Оптические константы", opt_const_form=opt_const_form)
 
 
 @main_bp.route('/login', methods=["POST", "GET"])

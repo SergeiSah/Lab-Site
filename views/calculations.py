@@ -17,6 +17,7 @@ def beta_delta():
                     .add_columns(Compound.formula, Density.density)
                     .filter((Density.density.isnot(None)) & (~Compound.formula.contains('∙'))
                                                           & (~Compound.formula.contains('(')))
+                    .order_by(Compound.formula)
                     .all()]
 
     opt_const_form = OptConstForm()

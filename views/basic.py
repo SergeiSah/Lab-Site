@@ -81,4 +81,4 @@ def login():
 @basic.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('home_page'))
+    return redirect(url_for('main.home_page'))

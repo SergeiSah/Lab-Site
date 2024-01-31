@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request, jsonify, Blueprint
 from xray_models import Compound
 from forms import OptConstForm
-from plotters import OptConstPlotter
+from views.x_ray_mirrors.plotters import OptConstPlotter
 
 
 calc = Blueprint('calc', __name__, url_prefix='/calc')

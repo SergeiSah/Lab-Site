@@ -4,8 +4,8 @@ import numpy as np
 import plotly
 import plotly.express as px
 
-from compounds import Compound
-from bi_mirrors import BiMirror
+from views.x_ray_mirrors.compounds import Compound
+from views.x_ray_mirrors.bi_mirrors import BiMirror
 
 
 class OptConstPlotter:

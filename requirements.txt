@@ -5,3 +5,10 @@ flask-sqlalchemy
 flask-wtf
 werkzeug
 gunicorn
+pandas
+scipy
+numpy
+plotly
+xraydb
+chemparse
+sqlalchemy

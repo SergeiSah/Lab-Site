@@ -4,7 +4,6 @@ from plugins import db
 class Element(db.Model):
     __bind_key__ = 'Elements'
 
-    """Справочник элементов"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     Z = db.Column(db.Integer, nullable=False)
     Element = db.Column(db.String, nullable=False)
@@ -23,7 +22,6 @@ class Element(db.Model):
 class Compound(db.Model):
     __bind_key__ = 'Compounds'
 
-    """Справочник компонентов"""
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String)
     formula = db.Column(db.String)

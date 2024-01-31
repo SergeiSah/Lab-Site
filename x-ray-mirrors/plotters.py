@@ -1,5 +1,7 @@
+import json
 import pandas as pd
 import numpy as np
+import plotly
 import plotly.express as px
 
 from compounds import Compound
@@ -19,8 +21,8 @@ class OptConstPlotter:
         self.add_materials(*materials)
 
         self.image = {
-            'width': 1000,
-            'height': 600,
+            'width': 850,
+            'height': 650,
             'template': 'seaborn',
             'font': {'size': 20, 'family': 'Work Sans'}
         }
@@ -100,7 +102,7 @@ class OptConstPlotter:
                 const.interpolate(method='index', inplace=True)
 
     def plot_opt_consts(self, materials: list[str | tuple[str, float]],
-                        energy: float, x: str = 'n') -> None:
+                        energy: float, x: str = 'n') -> json:
         """
         materials: list
             list of materials
@@ -126,11 +128,13 @@ class OptConstPlotter:
         fig.add_annotation(text=f'Energy = {energy} eV', showarrow=False, bgcolor='orange', xref='paper', yref='paper',
                            x=1, y=1, font=dict(color='DarkSlateGrey', size=24), borderpad=10)
 
-        fig.update_layout(**self.image, **self.backgrkound)
+        fig.update_layout(**self.image, **self.backgrkound, title_text=f'Оптические константы')
         fig.update_yaxes(**self.borders, **self.grid, title_text=r'Absorption index', zeroline=False)
         fig.update_xaxes(**self.borders, **self.grid, title_text='Re(n)' if x == 'n' else 'Refraction index decrement')
 
-        fig.show()
+        graph = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+
+        return graph
 
     def plot_abs_coeff(self, materials: list[str | tuple[str, float]],
                        en_range: list[float], xdtick=20, log_y=True) -> None:

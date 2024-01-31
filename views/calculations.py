@@ -1,5 +1,5 @@
-from flask import render_template, redirect, url_for, request, jsonify, Blueprint
-from xray_models import Compound
+from flask import render_template,request, Blueprint
+from xray_models import Compound, Density
 from forms import OptConstForm
 from views.x_ray_mirrors.plotters import OptConstPlotter
 
@@ -12,8 +12,12 @@ def beta_delta():
     plotter = OptConstPlotter()
 
     # download all available elements and compounds from the databases
-    choices_comp = [(c.formula, c.formula) for c in Compound.query.all()
-                    if c.density is not None and '∙' not in c.formula and '(' not in c.formula]
+    choices_comp = [(c.formula, f'{c.formula} ({c.density:.1f} г/см3)') for c in Compound.query
+                    .join(Density, onclause=Compound.id == Density.compound_id)
+                    .add_columns(Compound.formula, Density.density)
+                    .filter((Density.density.isnot(None)) & (~Compound.formula.contains('∙'))
+                                                          & (~Compound.formula.contains('(')))
+                    .all()]
 
     opt_const_form = OptConstForm()
     opt_const_form.materials.choices = choices_comp
@@ -23,7 +27,7 @@ def beta_delta():
         compounds = request.form.getlist('materials')
         graph = plotter.plot_opt_consts(compounds, energy)
     else:
-        graph = plotter.plot_opt_consts([], 112)
+        graph = plotter.plot_opt_consts([], 100)
 
     return render_template("beta_delta.html", title="Оптические константы", opt_const_form=opt_const_form,
                            plot=graph)

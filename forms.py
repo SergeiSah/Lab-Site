@@ -11,5 +11,6 @@ class LoginForm(FlaskForm):
 
 class OptConstForm(FlaskForm):
     materials = SelectMultipleField('Материалы')
-    energy = FloatField('Энергия (эВ)', default=112)
+    energy = FloatField('Энергия (эВ)', default=100)
+    density = FloatField('Плотность (г/cм3)')
     submit = SubmitField('Рассчитать')

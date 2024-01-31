@@ -13,7 +13,7 @@ def beta_delta():
 
     # download all available elements and compounds from the databases
     choices_comp = [(c.formula, c.formula) for c in Compound.query.all()
-                    if '∙' not in c.formula and '(' not in c.formula]
+                    if c.density is not None and '∙' not in c.formula and '(' not in c.formula]
 
     opt_const_form = OptConstForm()
     opt_const_form.materials.choices = choices_comp

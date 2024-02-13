@@ -1,3 +1,4 @@
+import os
 from flask import render_template, redirect, url_for, request, jsonify, Blueprint
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
@@ -12,7 +13,11 @@ basic = Blueprint('main', __name__, url_prefix='')
 @basic.route('/')
 def home_page():
     data_conferences = db.session.query(Conference).all()
-    return render_template("index.html", title="ЛУМРС", data_conferences=data_conferences)
+
+    index_img_path = './static/img/index/'
+    index_images = [f"{index_img_path}{img}" for img in os.listdir(index_img_path)]
+
+    return render_template("index.html", title="ЛУМРС", data_conferences=data_conferences, index_images=index_images)
 
 
 @basic.route('/employees')

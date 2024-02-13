@@ -2,8 +2,38 @@
 
     <!--Main content-->
     <section id="Content">
-        <div class="container-fluid main-content-image-box">
-            <img src="../static/img/index_img.jpg" class="img-fluid" alt="content-img">
+
+        <!-- Main content images -->
+        <div id="carouselMainPage" class="container-fluid carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+              {% for img in index_images %}
+                {% if loop.index == 1 %}
+                   <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="{{ loop.index - 1 }}"
+                           class="active" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+                {% else %}
+                   <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="{{ loop.index - 1 }}"
+                           aria-label="Slide {{ loop.index }}"></button>
+                {% endif %}
+
+              {% endfor %}
+          </div>
+
+          <div class="carousel-inner main-content-image-box">
+              {% for img in index_images %}
+                {% if loop.index == 1 %}
+                   {% set active = ' active' %}
+                {% else %}
+                   {% set active = '' %}
+                {% endif %}
+
+                <div class="carousel-item main-content-image-box{{ active }}" data-bs-interval="5000">
+                  <img src="{{ img }}" class="img-fluid main-content-image" alt="{{ img.split('/')[-1] }}">
+                </div>
+
+              {% endfor %}
+          </div>
+
         </div>
 
         <div class="container-fluid">

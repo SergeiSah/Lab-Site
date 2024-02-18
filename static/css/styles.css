@@ -20,17 +20,18 @@ a {
 
 .scopus {
     background-color: #e9711c;
-    padding: 0 4px;
+    padding: 5px;
 }
 
 .r-gate {
-    background-color: #00cab9;
+    background-color: white;
+    color: black;
     padding: 4px 0;
 }
 
 .publons {
     background-color: white;
-    color: #369;
+    padding: 3px;
 }
 
 .orcid {

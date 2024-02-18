@@ -62,7 +62,7 @@
                                         <a href="{{ employee.sc }}"><span class="iconify scopus" data-icon="simple-icons:scopus" data-inline="false"></span></a>
                                     {% endif %}
                                     {% if employee.publons %}
-                                        <a href="{{ employee.publons }}"><span class="iconify publons" data-icon="simple-icons:publons" data-inline="false"></span></a>
+                                        <a href="{{ employee.publons }}"><img class="publons" src="{{ url_for('static', filename='icons/clarivate.svg') }}"></img></a>
                                     {% endif %}
                                     {% if employee.orcid %}
                                         <a href="{{ employee.orcid  }}"><span class="iconify orcid" data-icon="cib:orcid" data-inline="false"></span></a>

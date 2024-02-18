@@ -4,7 +4,7 @@ from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 
 from plugins import db
-from site_models import User, Method, Employee, Conference, Publications
+from basic_pages.models import User, Method, Employee, Conference, Publications
 
 
 basic = Blueprint('main', __name__, url_prefix='')

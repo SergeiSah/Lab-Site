@@ -1,6 +1,7 @@
 from plugins import db
 
 
+# ---------- X-ray models ----------
 class Element(db.Model):
     __bind_key__ = 'Elements'
 

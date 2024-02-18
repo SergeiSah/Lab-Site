@@ -20,7 +20,7 @@ mu = gamma * epsilon_a + (1 - gamma) * epsilon_b - the permittivity averaged ove
 import pandas as pd
 import numpy as np
 from scipy.optimize import fsolve
-from views.x_ray_mirrors.compounds import Compound, HC_CONST
+from calc_pages.x_ray_mirrors.compounds import Compound, HC_CONST
 
 
 class BiMirror:

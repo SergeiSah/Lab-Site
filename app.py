@@ -1,9 +1,9 @@
 from flask import Flask
 from config import Config
 from plugins import admin, login_manager
-from site_models import *
-from views.basic import basic
-from views.calculations import calc
+from basic_pages.models import *
+from basic_pages.views import basic
+from calc_pages.views import calc
 
 
 def create_app():

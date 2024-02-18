@@ -1,7 +1,7 @@
-from flask import render_template,request, Blueprint
-from xray_models import Compound, Density
-from forms import OptConstForm
-from views.x_ray_mirrors.plotters import OptConstPlotter
+from flask import render_template, request, Blueprint
+from calc_pages.forms import OptConstForm
+from calc_pages.models import Compound, Density
+from calc_pages.x_ray_mirrors.plotters import OptConstPlotter
 
 
 calc = Blueprint('calc', __name__, url_prefix='/calc')

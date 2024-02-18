@@ -15,7 +15,7 @@ HC_CONST = PLANCK * speed_of_light * 1e+10                  # [eV * Å]
 def connect_to_db(db_path: str, table_name: str):
     def actual_decorator(func):
         meta = MetaData()
-        engine = create_engine(f'sqlite+pysqlite:///{Config.BASE_DIR}/views/x_ray_mirrors/data_collections/{db_path}')
+        engine = create_engine(f'sqlite+pysqlite:///{Config.BASE_DIR}/calc_pages/x_ray_mirrors/data_collections/{db_path}')
         data = Table(table_name, meta, autoload_with=engine)
 
         def wrapper(*args, **kwargs):

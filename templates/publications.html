@@ -1,8 +1,8 @@
 {% include 'header.html' %}
 
 <section>
-    <div class="container-fluid mt-5">
-        <h2 class="text-center mt-5">Публикации</h2>
+    <div class="container-fluid">
+        <h2 class="text-center">Публикации</h2>
 
         {% set count = namespace(value=publications_num) %}
         {% for pub_year in data_publications %}

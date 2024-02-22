@@ -5,12 +5,12 @@
 <section id="Content">
     <div class="container-fluid">
 
-        <h1 class="text-center">Состав лаборатории</h1>
+        <h1 class="text-center">Состав научной группы</h1>
             {% set label_desc = {'professor': 'Профессора', 'work_horse': 'Рабочие лошадки', 'student': 'Студенты'} %}
 
             <!--Persons by rang-->
             {% for label in data_employees %}
-                <div class="row bg-info mt-5 mb-1 mx-0 pt-2 pb-1 px-3 rounded-1">
+                <div class="employee-type-row row mt-5 mb-1 mx-0 pt-2 pb-1 px-3">
                 <h2>{{ label_desc[label] }}</h2>
                 </div>
 

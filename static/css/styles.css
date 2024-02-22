@@ -35,6 +35,9 @@ a {
 }
 
 .orcid {
+    background-color: white;
+    border-radius: 50%;
+    border: 0px;
     color: #a6ce39;
 }
 
@@ -47,8 +50,17 @@ a {
     background-color: #FFCD4B !important;
 }
 
+.employee-type-row {
+    background: linear-gradient(90deg, rgba(59,57,54,1) 0%, rgba(138,134,127,1) 39%, rgba(230,225,219,1) 100%);
+    color: white;
+}
+
 .employee-card-footer, .employee-card-header {
-    background-color: #EBF3E8;
+    background-color: #889C9B;
+}
+
+.employee-card-footer {
+    height: 3.5rem;
 }
 
 .btn-primary {
@@ -88,12 +100,8 @@ a {
     align-items: center;       /*Центрирование по вертикали */
 }
 
-.research-card, .employee-card, .publication-card, .method-card {
-    box-shadow: 0 0 10px #A8ADB4;
-}
-
-.employee-card-footer {
-    height: 3.5rem;
+.research-card, .employee-card, .publication-card, .method-card, .employee-type-row {
+    box-shadow: 0px 0px 15px #A8ADB4;
 }
 
 .name-in-card {
@@ -115,8 +123,7 @@ a {
 }
 
 .publication-year {
-    background: rgb(128,181,184);
-    background: linear-gradient(90deg, rgba(128,181,184,1) 0%, rgba(170,215,217,1) 35%, rgba(241,253,254,1) 100%);
+    background: linear-gradient(90deg, rgba(59,57,54,1) 0%, rgba(138,134,127,1) 39%, rgba(230,225,219,1) 100%);
     color: white;
     box-shadow: 2px 2px 5px #A8ADB4;
 }

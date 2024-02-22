@@ -113,6 +113,10 @@ a {
     height: 100%;
 }
 
+.materials-box .card img {
+    height: 150px;
+}
+
 .name-in-card {
     height: 8rem;
 }

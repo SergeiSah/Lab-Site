@@ -30,5 +30,10 @@ def beta_delta():
     else:
         graph = plotter.plot_opt_consts([], 100)
 
-    return render_template("beta_delta.html", title="Оптические константы", opt_const_form=opt_const_form,
+    return render_template("calculations/beta_delta.html", title="Оптические константы", opt_const_form=opt_const_form,
                            plot=graph)
+
+
+@calc.route('/mlm-parameters', methods=["POST", "GET"])
+def mlm_parameters():
+    return render_template("calculations/mlm_parameters.html", title="Оптимальные параметры зеркал")

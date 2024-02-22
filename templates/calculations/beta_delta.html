@@ -1,14 +1,12 @@
 {% include "header.html" %}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
-<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
-
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <section id="Materials">
 
     <div class="materials-box">
         <div class="row mt-5 px-4">
+
             <div class="col-3 select-materials-and-energy">
                 <form method="POST" name="calc_form" class="mt-5">
                     {{ opt_const_form.materials.label() }}
@@ -20,6 +18,7 @@
                     {{ opt_const_form.submit(class="mt-4 btn btn-warning") }}
                 </form>
             </div>
+
             <div class="col-9 chart" id="opt_const_graph">
                 <script>
                     var graphs = {{plot | safe}};
@@ -32,10 +31,13 @@
 
 </section>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+
 <script>
     new MultiSelectTag('materials', {
     rounded: true,    // default true
-    shadow: true,      // default false
+    shadow: false,      // default false
     placeholder: 'Search',  // default Search...
     tagColor: {
         textColor: '#327b2c',
@@ -47,6 +49,7 @@
     }
     })
 </script>
+
 
 
 {% include "footer.html" %}

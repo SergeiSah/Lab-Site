@@ -23,31 +23,16 @@
 <body>
 
 <section id="Title">
-    <!--SPSU logo with name and the name of the lab-->
-<!--    <header class="container-fluid">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-6 col-sm-0">-->
-<!--                <a href="https://phys.spbu.ru/">-->
-<!--                    <img class="my-2" src="../static/img/phys-logo.svg" id="spbu-logo" alt="logo">-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6 col-sm-12 lab-name-box text-lg-end">-->
-<!--                <h3>Научная Группа Лаборатории<br>Ультрамягкой Рентгеновской Спектроскопии</h3>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </header>-->
 
     <!--Navigation bar-->
     <header class="navbar navbar-expand-lg navbar-dark bd-gutter bg-primary fixed-top">
+
         <nav class="container-fluid">
 
             <!-- Button trigger popup with sign in -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">
               <i class="fas fa-door-open"></i>
             </button>
-
-            <!-- Popup with sign in form -->
-            {% include "containers/sign_in_popup.html" %}
 
             <!--Button in case of collapse-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
@@ -76,6 +61,9 @@
             </div>
         </nav>
     </header>
+
+    <!-- Popup with sign in form -->
+    {% include "containers/sign_in_popup.html" %}
 
 
 </section>

@@ -100,8 +100,17 @@ a {
     align-items: center;       /*Центрирование по вертикали */
 }
 
-.research-card, .employee-card, .publication-card, .method-card, .employee-type-row {
-    box-shadow: 0px 0px 15px #A8ADB4;
+.research-card,
+.employee-card,
+.publication-card,
+.method-card,
+.employee-type-row,
+.materials-box .card {
+    box-shadow: 0px 0px 10px #A8ADB4;
+}
+
+.materials-box .card {
+    height: 100%;
 }
 
 .name-in-card {
@@ -141,6 +150,14 @@ a {
 
 .publication-card-body {
     color: dimgray;
+}
+
+.materials-box .card-header {
+    background-color: #B2BEBF;
+}
+
+.materials-box .card:hover {
+    transform: scale(1.01);
 }
 
 .numberCircle {

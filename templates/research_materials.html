@@ -1,11 +1,39 @@
 {% include "header.html" %}
 
-<section id="Materials">
+<section id="Materials" class="container-fluid">
 
-    <div class="materials-box">
-        <a href="{{ url_for('calc.beta_delta') }}">Расчеты оптических констант</a>
+    <div class="materials-box mt-3">
+        <div class="row d-flex flex-wrap">
+
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Расчеты оптических констант</h5>
+                    </div>
+                    <div class="card-body">
+                        $$n=1-\delta-i\beta=1-\left(\frac{N_a r_e \lambda^2}{2\pi}\right)(f_1+if_2)$$
+                    </div>
+                    <a href="{{ url_for('calc.beta_delta') }}" class="stretched-link"></a>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5>Расчеты оптимальных параметров зеркал</h5>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+
+                    </div>
+                    <a href="" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 {% include "footer.html" %}
